@@ -36,7 +36,7 @@ public class EmployeeService {
 	
 	// q5
 	public void sortEmpBySalDes() {
-		List<Employee> list =EmployeeRepository.getEmployees().stream().sorted((e1,e2)->Double.compare(e2.getSalary(), e1.getSalary())).collect(Collectors.toList());
+		List<Employee> list =EmployeeRepository.getEmployees().stream().sorted((e1,e2)->Double.compare(e2.getSalary(),e1.getSalary())).collect(Collectors.toList());
 				
 		list.forEach(e->System.out.println(e.getFirstName() + " " + e.getSalary()));
 			
@@ -46,4 +46,5 @@ public class EmployeeService {
 		
 		
 	
+
 }
