@@ -6,7 +6,7 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
         
     <context:annotation-config/>  <!-- for enabling annotations-->
-    <bean id="emp" class="com.cg.bean.Employee" scope=""> <!-- scope:prototype-->
+    <bean id="emp" class="com.cg.bean.Employee" scope=""> <!-- scope:singeleton(by default),prototype(to treat as diff obj),session,request-->
     	  <!-- for constructor injection-->
     	<constructor-arg name="eid" value="101"></constructor-arg>
     	<constructor-arg name="name" value="Abc"></constructor-arg>
