@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> <!-- bean definitions here -->
+        
+    <context:annotation-config/>  <!-- for enabling annotations-->
+    <bean id="emp" class="com.cg.bean.Employee" scope=""> <!-- scope:prototype-->
+    	  <!-- for constructor injection-->
+    	<constructor-arg name="eid" value="101"></constructor-arg>
+    	<constructor-arg name="name" value="Abc"></constructor-arg>
+    	<!-- <constructor-arg name="address" ref="add"></constructor-arg>   -->	 	<!-- if annotation use, then remove this line-->
+    </bean>    <!-- IOC CONTAINER , WE CONFIGURE Employee class-->
+    
+    <bean id ="add" class="com.cg.bean.Address">
+    <!-- for constructor injection-->
+    <constructor-arg name="city" value="New York"></constructor-arg>
+    <constructor-arg name="zip" value="89687"></constructor-arg>
+    </bean>
+    
+    <bean id ="add1" class="com.cg.bean.Address">
+    <!-- for constructor injection-->
+    <constructor-arg name="city" value="New "></constructor-arg>
+    <constructor-arg name="zip" value="8968"></constructor-arg>
+    </bean>
+</beans>
