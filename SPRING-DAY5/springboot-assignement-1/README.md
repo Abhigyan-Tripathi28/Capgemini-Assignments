@@ -1,2 +1,2 @@
 ### DTO + Mapper usage
-### NOW: CLIENT ---> CONTROLLER --> SERVICE --> REPO --> DB(NOT DIRECT, BUT THROUGH DTO)
+### NOW: CLIENT ---> CONTROLLER --> SERVICE --> REPO --> DB(not direct, but through DTO)
