@@ -34,13 +34,13 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public OrderEntity getOrderById(Long id) {
-        return orepo.findById(id).orElseThrow(OrderNotFoundException :: new);
-//        Optional<OrderEntity> op = orepo.findById(id);
-//		if(op.isPresent()) {
-//			return OrderMapper.toResponseDTO(op.get());
-//		}
-//		
-//		throw new OrderNotFoundException;
+//        return orepo.findById(id).orElseThrow(OrderNotFoundException :: new);
+        Optional<OrderEntity> op = orepo.findById(id);
+		if(op.isPresent()) {
+			return op.get();
+		}
+		
+		throw new OrderNotFoundException();
     }
 
     @Override
@@ -57,3 +57,4 @@ public class OrderServiceImpl implements OrderService {
         orepo.deleteById(id);
     }
 }
+
